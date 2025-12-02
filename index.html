@@ -3,61 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario - Historia Clínica</title>
+    <title>Historia Clínica – Huellitas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header> 
-        <h1 id="titulo-especial">Clínica Veterinaria Huellitas</h1>
-        <nav>
-            <ul>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1 class="titulo-principal">Clínica Veterinaria Huellitas</h1>
+
+        <nav aria-label="Menú principal">
+            <ul class="menu">
                 <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="index.html">Historia Clínica</a></li>
+                <li><a href="index.html" class="activo">Historia Clínica</a></li>
                 <li><a href="registros.html">Registros Guardados</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <section>
-            <h2>Registra la historia clínica de tu mascota</h2>
+        <section class="seccion-formulario">
+            <header>
+                <h2>Registra la historia clínica de tu mascota</h2>
+                <p>Completa el siguiente formulario para guardar la información de la visita.</p>
+            </header>
+
             <form id="form-historia">
+
+                <!-- DATOS DEL DUEÑO -->
                 <fieldset>
                     <legend>Datos del dueño</legend>
-                    <label for="nombre_dueno">Nombre del dueño:</label>
+
+                    <label for="nombre_dueno">Nombre del dueño *</label>
                     <input type="text" id="nombre_dueno" required>
 
-                    <label for="telefono_dueno">Teléfono:</label>
+                    <label for="telefono_dueno">Teléfono *</label>
                     <input type="tel" id="telefono_dueno" required>
                 </fieldset>
 
+                <!-- DATOS DE LA MASCOTA -->
                 <fieldset>
                     <legend>Datos de la mascota</legend>
-                    <label for="nombre_mascota">Nombre de la mascota:</label>
+
+                    <label for="nombre_mascota">Nombre de la mascota *</label>
                     <input type="text" id="nombre_mascota" required>
 
-                    <label for="especie_mascota">Especie:</label>
+                    <label for="especie_mascota">Especie *</label>
                     <select id="especie_mascota" required>
+                        <option value="">Seleccione</option>
                         <option value="Perro">Perro</option>
                         <option value="Gato">Gato</option>
                     </select>
                 </fieldset>
 
+                <!-- DETALLES DE LA CITA -->
                 <fieldset>
                     <legend>Detalles de la cita</legend>
-                    <label for="fecha_cita">Fecha de la visita:</label>
+
+                    <label for="fecha_cita">Fecha *</label>
                     <input type="date" id="fecha_cita" required>
 
-                    <label for="hora_cita">Hora de la visita:</label>
+                    <label for="hora_cita">Hora *</label>
                     <input type="time" id="hora_cita" required>
                 </fieldset>
 
-                <button type="submit">Guardar Historia Clínica</button>
+                <button type="submit" class="boton-guardar">Guardar Historia Clínica</button>
             </form>
         </section>
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <footer>
         <p>Clínica Veterinaria Huellitas &copy; 2025</p>
     </footer>
