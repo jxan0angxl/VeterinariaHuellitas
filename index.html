@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario - Historia Clínica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> 
+        <h1 id="titulo-especial">Clínica Veterinaria Huellitas</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="index.html">Historia Clínica</a></li>
+                <li><a href="registros.html">Registros Guardados</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registra la historia clínica de tu mascota</h2>
+            <form id="form-historia">
+                <fieldset>
+                    <legend>Datos del dueño</legend>
+                    <label for="nombre_dueno">Nombre del dueño:</label>
+                    <input type="text" id="nombre_dueno" required>
+
+                    <label for="telefono_dueno">Teléfono:</label>
+                    <input type="tel" id="telefono_dueno" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de la mascota</legend>
+                    <label for="nombre_mascota">Nombre de la mascota:</label>
+                    <input type="text" id="nombre_mascota" required>
+
+                    <label for="especie_mascota">Especie:</label>
+                    <select id="especie_mascota" required>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles de la cita</legend>
+                    <label for="fecha_cita">Fecha de la visita:</label>
+                    <input type="date" id="fecha_cita" required>
+
+                    <label for="hora_cita">Hora de la visita:</label>
+                    <input type="time" id="hora_cita" required>
+                </fieldset>
+
+                <button type="submit">Guardar Historia Clínica</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Clínica Veterinaria Huellitas &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
